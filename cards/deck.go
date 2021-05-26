@@ -13,22 +13,22 @@ import (
 type deck []string
 
 func newDeck() deck {
-  cards := deck{}
+	cards := deck{}
 
-  cardSuits := []string{"Spades", "Diamonds", "Hearts", "Clubs"}  
-  cardValues := []string{"Ace", "Two", "Three", "Four"} 
-  
-  for _, suit := range cardSuits{
-	  for _, value := range cardValues{
-		cards = append(cards, value + " of " + suit)
-	  } 
-  }
+	cardSuits := []string{"Spades", "Diamonds", "Hearts", "Clubs"}
+	cardValues := []string{"Ace", "Two", "Three", "Four"}
 
-  return cards
+	for _, suit := range cardSuits {
+		for _, value := range cardValues {
+			cards = append(cards, value+" of "+suit)
+		}
+	}
+
+	return cards
 }
 
 func (d deck) print() {
-	
+
 	for i, card := range d {
 		fmt.Println(i, card)
 	}
@@ -69,4 +69,4 @@ func (d deck) shuffle() {
 
 		d[i], d[newPosition] = d[newPosition], d[i]
 	}
-} 
+}
