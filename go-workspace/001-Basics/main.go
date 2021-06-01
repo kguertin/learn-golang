@@ -43,8 +43,17 @@ func main() {
 	fmt.Printf("%v\n", b)
 
 	//String Print
-	s := fmt.Sprintf("%#x\t%b\t%x\n", y, y, y)
+	s := fmt.Sprintf("%#x\t%b\t%x", y, y, y)
 	fmt.Println(s)
+
+    // Create Types
+	c := 666
+	fmt.Printf("%T\n", c)
+    
+	type hotdog int
+	var d hotdog = 21
+
+	fmt.Printf("%T\n", d)
 
 }
 
