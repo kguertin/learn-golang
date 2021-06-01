@@ -5,7 +5,13 @@ import "fmt"
 var i = 43
 
 // Sets type and sets zero value of that type if not assigned a value (nil, 0, false, etc.)
+// Package scope
 var z int
+var str string = "This is a string"
+var a string =  `He said "NO!"`
+
+// This will infer the type based on the assigned value
+var b = 13
 
 func main() {
 	n, _ := fmt.Println("Hey!")
@@ -23,7 +29,22 @@ func main() {
 	fmt.Println(i)
 	foo()
 
-	fmt.Println(z)
+	fmt.Printf("%T\n", z)
+	fmt.Printf("%T\n", str)
+	fmt.Println(a)
+
+	fmt.Println(y)
+	// Format Strings as first value
+	fmt.Printf("%T\n", y)
+	fmt.Printf("%b\n", y)
+	fmt.Printf("%x\n", y)
+	fmt.Printf("%#x\n", y)
+	fmt.Printf("%#x\t%b\t%x\n", y, y, y)
+	fmt.Printf("%v\n", b)
+
+	//String Print
+	s := fmt.Sprintf("%#x\t%b\t%x\n", y, y, y)
+	fmt.Println(s)
 
 }
 
