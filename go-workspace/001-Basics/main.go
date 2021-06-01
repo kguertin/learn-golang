@@ -55,6 +55,10 @@ func main() {
 
 	fmt.Printf("%T\n", d)
 
+	// Type Conversion (Casting in other languages)
+	c = int(d)
+	fmt.Println(c)
+
 }
 
 func foo() {
