@@ -10,6 +10,9 @@ var d int = 42
 var e string = "James Bond"
 var f bool = true
 
+type newType int
+var g int 
+
 func main() {
 	x := 42
 	y := "James Bond"
@@ -29,11 +32,15 @@ func main() {
 	s := fmt.Sprintf("%v\t%v\t%v", d, e, f)
 	fmt.Println(s)
 
-	type newType int
+	// Underlying type
 	var newVar newType = 5
 	fmt.Printf("%v\n", newVar)
 	fmt.Printf("%T\n", newVar)
 	newVar = 42
 	fmt.Printf("%v\n", newVar)
+
+	g = int(x)
+	fmt.Println(g)
+	fmt.Printf("%T\n", g)
 
 }
