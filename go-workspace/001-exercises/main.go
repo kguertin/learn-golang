@@ -2,6 +2,10 @@ package main
 
 import "fmt"
 
+var a int
+var b string 
+var c bool
+
 func main() {
 	x := 42
 	y := "James Bond"
@@ -11,5 +15,11 @@ func main() {
 	fmt.Println(x)
 	fmt.Println(y)
 	fmt.Println(z)
+
+	// Values of package scope variables
+	// These have been assigned zero values 
+	fmt.Printf("%v\n", a)
+	fmt.Printf("%v\n", b)
+	fmt.Printf("%v\n", c)
 
 }
