@@ -19,5 +19,18 @@ func main() {
 		y++
 	}
 
-	fmt.Println("done")
+    z := 0
+	for {
+		z++
+		if z > 100{
+			break
+		}
+
+		if z % 2 != 0{
+			continue
+		}
+		fmt.Printf("z: %d\n", z)
+	}
+	
 }
+
