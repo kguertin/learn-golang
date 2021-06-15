@@ -11,4 +11,9 @@ func main() {
 			fmt.Printf("The outer loop: %v\t The inner loop: %d\n", i, j)
 		}
 	}
+
+	for i := 33; i <= 122; i++ {
+		fmt.Println(i)
+		fmt.Printf("%#x\t%#U\n", i,i)
+	}
 }
